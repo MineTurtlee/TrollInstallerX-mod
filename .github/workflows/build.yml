@@ -1,1 +1,15 @@
 name: build & upload
+
+on: 
+    workflow-dispatch:
+
+jobs:
+    build:
+        name: Build
+        runs-on: macOS-latest
+        steps:
+            - name: Checkout the Repo
+              uses: actions/checkout@main
+            - name: Run script
+              run: |
+                  cd ${{ GITHUB.WORKSPACE }} & sh ./build.sh
