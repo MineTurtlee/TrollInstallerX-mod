@@ -10,8 +10,8 @@ jobs:
       steps:
          - name: Checkout the Repo
            uses: actions/checkout@main
+         - name: Install ldid
+           uses: MOZGIII/install-ldid-action@v1
          - name: Run script
            run: |
              cd ${{ GITHUB.WORKSPACE }} & sh ./build.sh
-         - name: Install ldid
-           uses: MOZGIII/install-ldid-action@v1
