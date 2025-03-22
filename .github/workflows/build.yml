@@ -1,7 +1,7 @@
 name: build & upload
 
 on: 
-   workflow-dispatch:
+   workflow_dispatch:
 
 jobs:
    build:
