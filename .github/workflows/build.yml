@@ -16,3 +16,7 @@ jobs:
          - name: Run script
            run: |
              cd ${{ GITHUB.WORKSPACE }} & sh ./build.sh
+         - name: Upload IPA file
+           uses: actions/upload-artifact@latest
+           with:
+              name: TrollInstallerX.ipa
