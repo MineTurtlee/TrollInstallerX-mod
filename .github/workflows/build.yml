@@ -11,9 +11,8 @@ jobs:
          - name: Checkout the Repo
            uses: actions/checkout@main
          - name: Install ldid
-           uses: MOZGIII/install-ldid-action@v1
-           with:
-              tag: v2.1.5-procursus7
+           run: |
+              brew install ldid
          - name: Run script
            run: |
              cd ${{ GITHUB.WORKSPACE }} & sh ./build.sh
